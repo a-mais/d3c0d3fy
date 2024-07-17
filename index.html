@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3C0D3FY - Decodificador de Texto</title>
+    <link rel="icon" type="image/png" href="./assets/codigo-binario.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<header class="cabecalho">
+    <h1 class="titulo-header">D3C0D3FY</h1>
+    <h2 class="subtitulo-header">codifique e decifre mensagens de forma dinâmica__</h2>
+</header>
+
+<body>
+    <div class="tutorial">
+        <h2>Como Funciona?</h2>
+        <p>1. Selecione o tipo de codificador</p>
+        <p>2. Digite sua mensagem</p>
+        <p>3. Receba sua mensagem codificada ou descodificada</p>
+    </div>
+    <section class="decodificador">
+        <div class="selecionador">
+            <label for="codificador">Codificador:</label>
+            <select name="codificadores" class="dropdown" onchange="handleSelecaoCodificador(event)">
+                <option value="Mensagem Inversa">Mensagem Inversa</option>
+                <option value="Morse">Morse</option>
+                <option value="Binario">Binario</option>
+            </select>
+        </div>
+        <div class="mensagem-form">
+            <input type="text" name="mensagem" id="msgInput">
+            <button onclick="processaMensagem('descriptografar')">Descriptografar</button>
+            <button onclick="processaMensagem('criptografar')">Criptografar</button>
+        </div>
+        <div class="mensagem-codefy">
+            <input type="text" name="mensagem-codificada" id="mensagemCodificada" readonly>
+            <button onclick="copiarTexto()">Copiar</button>
+        </div>
+    </section>
+    <video autoplay muted loop id="background-video">
+        <source src="./assets/Matrix Screensaver Rain Code - Binary English VJ Loop. Matrix Animation Background.mp4"
+            type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</body>
+
+<footer>
+    Desenvolvido por a-mais
+</footer>
+
+<script src="app.js" defer></script>
+
+</html>

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+    --fonte-principal: "JetBrains Mono", monospace;
+    --bg-base: rgb(6, 78, 54);
+    --color-font: whitesmoke;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    padding-left: 10%;
+}
+
+.tutorial {
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--color-font);
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 1%;
+    border-radius: 1.25rem;
+}
+
+.decodificador {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 3%;
+    color: var(--color-font);
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+}
+
+.selecionador {
+    display: flex;
+    flex-direction: column;
+    padding-right: 80%;
+}
+
+.dropdown {
+    background-color: #00491c;
+    border: 2px solid whitesmoke;
+    border-radius: 1rem;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: whitesmoke;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+}
+
+.dropdown:hover {
+    border-color: #000000;
+}
+
+.dropdown:focus {
+    border-color: #000000;
+}
+
+.dropdown option {
+    background-color: #00491c;
+    color: whitesmoke;
+}
+
+.messagem-form{
+   display: flex;
+   justify-content: space-between;
+}
+
+#msgInput{
+    width: 40%;
+    height: 200%;
+}
+
+body {
+    background-color: var(--bg-base);
+}
+
+footer {
+    background-color: var(--bg-base);
+    color: var(--color-font);
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    width: 100%;
+    padding: 1%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.titulo-header {
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 3.5rem;
+    color: var(--color-font);
+}
+
+.subtitulo-header {
+    font-family: var(--fonte-principal);
+    color: var(--color-font);
+}
+
+#background-video {
+    opacity: 20%;
+    width: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    background-color: var(--bg-base);
+}
