@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <header class="cabecalho">
-    <h1 class="titulo-header">D3C0D3FY</h1>
+    <div class="logo">
+        <img class="logo_cabecalho" src="./assets/codigo-binario.png" alt="logo decodefy">
+        <h1 class="titulo-header">D3C0D3FY</h1>
+    </div>
     <h2 class="subtitulo-header">codifique e decifre mensagens de forma dinâmica__</h2>
 </header>
 
@@ -18,25 +21,30 @@
         <h2>Como Funciona?</h2>
         <p>1. Selecione o tipo de codificador</p>
         <p>2. Digite sua mensagem</p>
-        <p>3. Receba sua mensagem codificada ou descodificada</p>
+        <p>3. Receba sua mensagem codificada ou decifrada</p>
     </div>
     <section class="decodificador">
         <div class="selecionador">
-            <label for="codificador">Codificador:</label>
+            <label for="codificador">CODIFICADOR:</label>
             <select name="codificadores" class="dropdown" onchange="handleSelecaoCodificador(event)">
                 <option value="Mensagem Inversa">Mensagem Inversa</option>
                 <option value="Morse">Morse</option>
                 <option value="Binario">Binario</option>
             </select>
         </div>
-        <div class="mensagem-form">
-            <input type="text" name="mensagem" id="msgInput">
+        <div class="buttons">
             <button onclick="processaMensagem('descriptografar')">Descriptografar</button>
             <button onclick="processaMensagem('criptografar')">Criptografar</button>
         </div>
+        <div class="mensagem-form">
+            <textarea name="mensagem" id="msgInput" rows="6" maxlength="256" placeholder="Digite uma mensagem..."
+                oninput="contadorCaracter()"></textarea>
+            <div class="char-counter" id="charCounter">256 caracteres restantes</div>
+        </div>
         <div class="mensagem-codefy">
-            <input type="text" name="mensagem-codificada" id="mensagemCodificada" readonly>
             <button onclick="copiarTexto()">Copiar</button>
+            <textarea name="mensagem-codificada" id="mensagemCodificada" rows="6" readonly
+                placeholder="Nenhuma mensagem enviada..."></textarea>
         </div>
     </section>
     <video autoplay muted loop id="background-video">

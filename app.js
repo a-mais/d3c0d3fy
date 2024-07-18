@@ -47,7 +47,6 @@ function processaMensagem(modo) {
 function copiarTexto() {
     const mensagemCodificadaInput = document.getElementById('mensagemCodificada');
     navigator.clipboard.writeText(mensagemCodificadaInput.value).then(() => {
-        alert('Texto copiado: ' + mensagemCodificadaInput.value);
     }).catch(err => {
         console.error('Erro ao copiar o texto: ', err);
     });
@@ -87,4 +86,11 @@ function codificaMensagemBinario(mensagem) {
 
 function decodificaMensagemBinario(mensagem) {
     return mensagem.split(' ').map(bin => String.fromCharCode(parseInt(bin, 2))).join('');
+}
+
+function contadorCaracter() {
+    const msgInput = document.getElementById('msgInput');
+    const charCounter = document.getElementById('charCounter');
+    const remainingChars = 256 - msgInput.value.length;
+    charCounter.textContent = `${remainingChars} caracteres restantes`;
 }
