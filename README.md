@@ -1,5 +1,12 @@
 # d3c0d3fy
 
+<p align="center">
+  <img src="https://github.com/a-mais/d3c0d3fy/blob/main/Insignia.png" alt="Badge LiterAlura" width="400">
+</p>
+
+
+![Badge Status: FINALIZADO](http://img.shields.io/static/v1?label=STATUS&message=%20FINALIZADO&color=red&style=for-the-badge)
+
 Um aplicativo que criptografa e descriptografa mensagens de texto, desenvolvido para o Challenger decodificador de texto da Alura.
 
 ## Índice
